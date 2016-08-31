@@ -1,0 +1,9 @@
+---
+# Variable file for playbooks [dbservers group]
+# Autopopulated
+
+mysqlservice: mysqld
+mysql_port: 3306
+dbuser: foouser
+dbname: foodb
+upassword: abc

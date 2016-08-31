@@ -1,0 +1,6 @@
+---
+# Variables aplicable to all host groups
+
+httpd_port: 80
+ntpserver: 192.68.1.2
+repository: https://github.com/bennojoy/mywebapp.git

@@ -1,0 +1,13 @@
+---
+# tasks file for apache
+- name: install apache
+  yum: name=httpd state=present
+
+- name: insert firewalld rule for httpd
+  firewalld: port={{httpd_port}}/tcp permanent=true state=enabled immediate=yes
+
+- name: start and enable apache
+  service: name=httpd state=started enabled=yes
+
+- name: confuigure SELinux to allow httpd to connect to remote DB
+  seboolean: name=httpd_can_network_connect_db state=true persistent=yes
