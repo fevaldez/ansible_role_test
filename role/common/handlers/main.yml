@@ -1,4 +1,4 @@
 ---
 # handlers file for common
-- name: Restart NTP.
+- name: restart ntp
   service: name=httpd state=restarted
