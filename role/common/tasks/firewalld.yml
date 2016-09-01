@@ -1,4 +1,5 @@
 ---
 # tasks file for Firewalld
 - name: install firewalld
+  become: yes
   yum: name=firewalld state=present
