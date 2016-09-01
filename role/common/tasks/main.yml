@@ -2,6 +2,7 @@
 # tasks file for common
 - include: selinux.yml
 - include: ntp.yml
+- include: firewalld.yml
 
 - name: Start firewalld.
   service: name=firewalld state=started enabled=yes
